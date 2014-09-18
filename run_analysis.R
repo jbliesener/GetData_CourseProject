@@ -69,9 +69,10 @@ retainColumns <-
 selectedColumns <- dict[retainColumns,]
 
 # Remember that the LINES in "selectedColumns" represent the COLUMNS in "dataset".
-# Each of those has in its first column the NUMBER of the column that it reprsents 
-# in "dataset". However, as we've added two additional columns (and might add more
-# in the future), it is safer to use the original column names "V1", "V2", ...
+# Each of those lines in "selectedColumns" has in its first column the NUMBER of 
+# the column that it reprsents in "dataset". However, as we've added three additional 
+# columns (and might add more in the future), it is safer to use the original column 
+# names "V1", "V2", ... 
 # So let's construct a chr vector that represents the NAMES of the columns that are to
 # be retained in "dataset"
 selectedColumnNames <- paste("V", selectedColumns$columnNumber, sep="")
